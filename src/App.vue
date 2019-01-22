@@ -1,38 +1,25 @@
 <template>
-  <div id="app" v-if="status == 'Ready'">
+  <div id="app" >
     <Header :title="title"/>
-    <MovieList/>
-    <img  alt="Vue logo" src="./assets/logo.png">
-    <h1>{{ hello }}</h1>
-    <HelloWorld 
-    msg="Welcome to Your Vue.js App"/>
-  </div>
-  <div v-else-if="status == 'Loading'">
-    Loading..
-  </div>
-  <div v-else>
-    Error
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue';
-import MovieList from './components/MovieList.vue';
 export default {
   name: 'app',
   data() { 
     return {
-        hello: "hello world",
+
         title: "Vue Movie DB",
-        isTrue: true ,
-        status: 'Ready'
+
     };
   },
   components: {
-    HelloWorld,
+
     Header,
-    MovieList
+
   }
 }
 </script>
