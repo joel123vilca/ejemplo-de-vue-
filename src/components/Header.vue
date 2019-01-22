@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>{{ newTitle }}</h1>
+        <h1> <router-link to="/">{{ newTitle }}</router-link></h1>
     </header>
 </template>
 
@@ -12,7 +12,7 @@ export default {
     },
     data() {
         return {
-            name: "Scott"
+            name: "Vue Movie DB "
         };
     },
     computed: {
