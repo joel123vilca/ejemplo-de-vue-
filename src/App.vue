@@ -1,6 +1,7 @@
 <template>
   <div id="app" v-if="status == 'Ready'">
     <Header :title="title"/>
+    <MovieList/>
     <img  alt="Vue logo" src="./assets/logo.png">
     <h1>{{ hello }}</h1>
     <HelloWorld 
@@ -17,6 +18,7 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue';
+import MovieList from './components/MovieList.vue';
 export default {
   name: 'app',
   data() { 
@@ -29,7 +31,8 @@ export default {
   },
   components: {
     HelloWorld,
-    Header
+    Header,
+    MovieList
   }
 }
 </script>

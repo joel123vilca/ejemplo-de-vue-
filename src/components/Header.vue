@@ -17,6 +17,9 @@ export default {
     },
     computed: {
         newTitle: function () {
+            if(this.title == 'hello'){
+                return this.title;
+            }
             return this.name;
         }
     }
