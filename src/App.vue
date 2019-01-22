@@ -1,7 +1,9 @@
 <template>
   <div id="app" >
     <Header :title="title"/>
-    <router-view/>
+    <transition name="fade">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -35,5 +37,12 @@ h1 {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: all 0.3s ease;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+    transform: translateX(100%);
 }
 </style>

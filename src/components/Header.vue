@@ -1,6 +1,8 @@
 <template>
     <header>
-        <h1> <router-link to="/">{{ newTitle }}</router-link></h1>
+        <h1> <router-link to="/">
+            <img src="../assets/logo.svg"> 
+        </router-link></h1>
         <transition name="fade">
         <h1 v-if="show">Animated</h1>
         </transition>
